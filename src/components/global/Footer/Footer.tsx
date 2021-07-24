@@ -5,6 +5,8 @@ import styles from "./Footer.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import { HiOutlineArrowNarrowUp, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
+import { FiMoon, FiSun } from "react-icons/fi"
+import { BsArrowUp } from "react-icons/bs"
 
 const Footer = (props: any) => {
 
@@ -47,11 +49,11 @@ const Footer = (props: any) => {
             <h4>Developed by <a className="global-border-regular" href="https://www.linkedin.com/in/timothykinsman/" target="_blank">Tim Kinsman</a></h4>
           </div>
           <div className={styles["footer-arrow"]}>
-            <a className="global-arrow" onClick={handleOnClickArrow}><HiOutlineArrowNarrowUp style={{fontSize: "40px"}} /></a>
+            <a className="global-arrow" onClick={handleOnClickArrow}><BsArrowUp style={{fontSize: "50px"}} /></a>
           </div>
           <div className={styles["footer-theme"]}>
-            {props.portfolio.theme === "DARK" ? <a><HiOutlineSun style={{fontSize: "40px"}} onClick={() => props.updateTheme("LIGHT")} /></a> :
-            <a><HiOutlineMoon style={{fontSize: "40px"}} onClick={() => props.updateTheme("DARK")} /></a>}
+            {props.portfolio.theme === "DARK" ? <a><FiSun style={{fontSize: "40px"}} onClick={() => props.updateTheme("LIGHT")} /></a> :
+            <a><FiMoon style={{fontSize: "40px"}} onClick={() => props.updateTheme("DARK")} /></a>}
           </div>
         </div>
     </div>

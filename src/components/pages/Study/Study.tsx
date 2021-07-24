@@ -13,7 +13,7 @@ import {connect} from "react-redux";
 import { DARK, LIGHT } from '../../../colors';
 import { HiOutlineArrowNarrowDown } from "react-icons/hi"
 import Carousel from './Carousel/Carousel';
-
+import { BsArrowDown } from "react-icons/bs"
 
 //add/remove important class!
 
@@ -183,7 +183,7 @@ const Study = (props: any) => {
                             </div>
                         </div>
                         <div className={styles["study-arrow"]}>
-                            <a onClick={() => handleOnClick('#content')}><HiOutlineArrowNarrowDown style={{fontSize: "40px"}} /></a>
+                            <a onClick={() => handleOnClick('#content')}><BsArrowDown style={{fontSize: "50px"}} /></a>
                         </div>
                     </div>
                 </div>

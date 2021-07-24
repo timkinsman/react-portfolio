@@ -18,6 +18,8 @@ import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
 import { DARK, LIGHT } from "../../../colors";
 import { HiOutlineArrowNarrowDown, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
+import { FiMoon, FiSun } from "react-icons/fi"
+import { BsArrowDown } from "react-icons/bs"
 
 const Home = (props: any) => {
   useEffect(() => {
@@ -128,9 +130,9 @@ const Home = (props: any) => {
               </div>
               
               <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-                {props.portfolio.theme === "DARK" ? <a><HiOutlineSun style={{fontSize: "40px"}} onClick={() => {props.updateTheme("LIGHT")}} /></a> :
-                <a><HiOutlineMoon style={{fontSize: "40px"}} onClick={() => {props.updateTheme("DARK")}} /></a>}
-                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><HiOutlineArrowNarrowDown style={{fontSize: "40px"}} /></a>
+                {props.portfolio.theme === "DARK" ? <a><FiSun style={{fontSize: "40px"}} onClick={() => {props.updateTheme("LIGHT")}} /></a> :
+                <a><FiMoon style={{fontSize: "40px"}} onClick={() => {props.updateTheme("DARK")}} /></a>}
+                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><BsArrowDown style={{fontSize: "50px"}} /></a>
               </div>
             </div>
           </div>
@@ -141,7 +143,7 @@ const Home = (props: any) => {
         <Panel study={_objPanelThree} id="four" next="five" />
         <Panel study={_objPanelFour} id="five" next="six" />
 
-        <div className="global-container" style={{paddingTop: "120px"}}>
+        <div className="global-container" style={{paddingTop: "240px"}}>
           <CardView filter="" id="six" />
           <Clients />
           <Awards />
