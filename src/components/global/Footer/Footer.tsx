@@ -4,15 +4,20 @@ import $ from "jquery";
 import styles from "./Footer.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import { HiOutlineArrowNarrowUp, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
-import { FiMoon, FiSun } from "react-icons/fi"
 import { BsArrowUp } from "react-icons/bs"
+import {ReactComponent as ThemeSun} from '../../../images/Theme/sun.svg';
+import {ReactComponent as ThemeMoon} from '../../../images/Theme/moon.svg';
 
 const Footer = (props: any) => {
-
   const handleOnClickArrow = () => {
     $("html,body").animate({
         scrollTop: 0}, "slow");
+  }
+
+  const renderTheme = () => {
+    return props.portfolio.theme === "DARK" ? 
+      <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
+      <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>
   }
 
   return (
@@ -20,8 +25,12 @@ const Footer = (props: any) => {
         <div style={{padding: '30px 0'}} />
         <div className={styles["footer-border"]} />
         <div className={styles["footer-container"]}>
-          <div className={styles["footer-grid"]}>
-            <div>
+          <div className={`${styles["footer-ismobile"]}`}>
+            <h5><a className="global-arrow" onClick={handleOnClickArrow}><BsArrowUp style={{fontSize: "50px"}} /></a></h5>
+            {renderTheme()}
+          </div>
+          <div className={styles["footer-grid-top"]}>
+            <div className={styles["footer-objs"]}>
               <h3 className="global-header">Go to</h3>
               <div className={styles["footer-grid"]}>
                 <h4><Link to="/" className="global-border-regular">Home</Link></h4>
@@ -32,7 +41,7 @@ const Footer = (props: any) => {
                 <h4><Link to="/contact" className="global-border-regular">Contact</Link></h4>
               </div>
             </div>
-            <div>
+            <div className={styles["footer-objs"]}>
               <h3 className="global-header">Social</h3>
               <div className={styles["footer-grid"]}>
                 <h4><a href="mailto:mskinsm@gmail.com" target="_blank" className="global-border-regular">Email</a></h4>
@@ -45,15 +54,18 @@ const Footer = (props: any) => {
             </div>
           </div>
           <div className={styles["footer-grid-bottom"]}>
-            <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
-            <h4>Developed by <a className="global-border-regular" href="https://www.linkedin.com/in/timothykinsman/" target="_blank">Tim Kinsman</a></h4>
+            <div className={styles["footer-objs"]}>
+              <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
+            </div>
+            <div className={styles["footer-objs"]}>
+              <h4>Developed by <a className="global-border-regular" href="https://www.timkinsman.com" target="_blank">Tim Kinsman</a></h4>
+            </div>
           </div>
-          <div className={styles["footer-arrow"]}>
+          <div className={`${styles["footer-isdesktop"]} ${styles["footer-arrow"]}`}>
             <a className="global-arrow" onClick={handleOnClickArrow}><BsArrowUp style={{fontSize: "50px"}} /></a>
           </div>
-          <div className={styles["footer-theme"]}>
-            {props.portfolio.theme === "DARK" ? <a><FiSun style={{fontSize: "40px"}} onClick={() => props.updateTheme("LIGHT")} /></a> :
-            <a><FiMoon style={{fontSize: "40px"}} onClick={() => props.updateTheme("DARK")} /></a>}
+          <div className={`${styles["footer-isdesktop"]} ${styles["footer-theme"]}`}>
+            {renderTheme()}
           </div>
         </div>
     </div>

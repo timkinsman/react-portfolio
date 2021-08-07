@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Awards from "../../global/Awards/Awards";
 import CardView from "../../global/CardView/CardView";
@@ -17,9 +17,11 @@ import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
 import { DARK, LIGHT } from "../../../colors";
-import { HiOutlineArrowNarrowDown, HiOutlineSun, HiOutlineMoon } from "react-icons/hi"
 import { FiMoon, FiSun } from "react-icons/fi"
 import { BsArrowDown } from "react-icons/bs"
+import {ReactComponent as ThemeSun} from '../../../images/Theme/sun.svg';
+import {ReactComponent as ThemeMoon} from '../../../images/Theme/moon.svg';
+
 
 const Home = (props: any) => {
   useEffect(() => {
@@ -119,7 +121,7 @@ const Home = (props: any) => {
                 currently living in Melbourne and<br />
                 and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
               </h1>
-              <div id="home-video" className={styles["video-container"]}>
+              <div className={`${styles["video-container"]} global-isdesktop`}>
                 <video className={styles["video"]} onCanPlayThrough={fadeIn} id="video" autoPlay loop muted src={video} />
               </div>
             </div>
@@ -130,8 +132,8 @@ const Home = (props: any) => {
               </div>
               
               <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-                {props.portfolio.theme === "DARK" ? <a><FiSun style={{fontSize: "40px"}} onClick={() => {props.updateTheme("LIGHT")}} /></a> :
-                <a><FiMoon style={{fontSize: "40px"}} onClick={() => {props.updateTheme("DARK")}} /></a>}
+                {props.portfolio.theme === "DARK" ? <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
+                <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>}
                 <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><BsArrowDown style={{fontSize: "50px"}} /></a>
               </div>
             </div>

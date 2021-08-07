@@ -68,7 +68,7 @@ function Spotify() {
     return (
       <div className={styles["spotify-container"]}>
           <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
-          <h3>Currently listening to <a className="global-border-regular" href={sLink} target="_blank">{lfmName} by {lfmText}</a></h3>
+          <h3><span className="global-isdesktop">Currently listening to </span><a className="global-border-regular" href={sLink} target="_blank">{lfmName} by {lfmText}</a></h3>
       </div>
     );
   }

@@ -6,7 +6,7 @@ import styles from "./Links.module.css";
 
 function Links() {
   return (
-    <div className={`${styles["links-container"]} global-hidden`}>       
+    <div className={`${styles["links-container"]} global-isdesktop`}>       
         <a className={styles["links-icon"]} href="mailto:mskinsm@gmail.com" target="_blank"><FontAwesomeIcon icon={faAt} /></a>
         <a className={styles["links-icon"]} href="https://www.behance.net/matthewkinsman" target="_blank"><FontAwesomeIcon icon={faBehance} /></a>
         <a className={styles["links-icon"]} href="https://www.linkedin.com/in/matthew-kinsman/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>

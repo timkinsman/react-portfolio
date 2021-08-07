@@ -51,7 +51,7 @@ function Pagnation() {
   }
 
   return (
-    <div className={`${styles.container} global-hidden`}>
+    <div className={`${styles.container} global-isdesktop`}>
         <a style={{opacity: current == "#one" ? "1" : "0.4"}} className={styles.icon} onClick={() => handleOnClick("#one")}><FontAwesomeIcon icon={faCircle} /></a>
         <a style={{opacity: current == "#two" ? "1" : "0.4"}} className={styles.icon} onClick={() => handleOnClick("#two")}><FontAwesomeIcon icon={faCircle} /></a>
         <a style={{opacity: current == "#three" ? "1" : "0.4"}} className={styles.icon} onClick={() => handleOnClick("#three")}><FontAwesomeIcon icon={faCircle} /></a>

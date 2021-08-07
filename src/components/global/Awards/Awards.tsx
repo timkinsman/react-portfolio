@@ -1,27 +1,19 @@
 import React from "react";
 import {connect} from "react-redux";
-import {images, imagesLight} from "../../../images/Awards";
 import styles from "./Awards.module.css";
+import {ReactComponent as AwardsApple} from '../../../images/Awards/awards-apple.svg';
 
-const Awards = (props: any) => {
-    const render = (parrAwards: Array<string>) => {
-        return parrAwards.map((pstrImg: string, pintIndex: number) => {
-            return (
-                <div key={pintIndex} className={styles["awards-img-container"]}>
-                    <img src={pstrImg} alt="img.svg" className={styles["awards-img"]} />
-                    <div>
-                        <p>Apple Watch<br />App of the Year</p>
-                    </div>
-                </div>
-            )
-        })
-    }
-
+const Awards = () => {
     return (
         <div className="global-wrapper">
             <h3 className="global-header">Awards & Recognition</h3>
             <div className={styles["awards-awards"]}>
-                {props.portfolio.theme === "DARK" ? render(images) : render(imagesLight)}
+                <div className={styles["awards-img-container"]}>
+                    <AwardsApple height="160" fill="currentColor" />
+                    <div>
+                        <p>Apple Watch<br />App of the Year</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

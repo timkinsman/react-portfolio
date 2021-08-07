@@ -8,7 +8,7 @@
 }
 
 .navbar-hamburger {
-    display: none;
+    display: flex;
     margin-left: auto;
 }
 

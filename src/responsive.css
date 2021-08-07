@@ -1,0 +1,83 @@
+@media only screen and (max-width: 768px) { /** Mobile */
+  .global-main-container, .global-container {
+    width: calc(100% - 50px);
+  }
+
+  .global-isdesktop {
+    display: none !important;
+  }
+
+  .global-title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+  
+@media only screen and (min-width: 768px) and (max-width: 991px) { /** Tablet */
+  .global-main-container, .global-container {
+    width: calc(100% - 115px); /** fix */
+  }
+
+  .global-isdesktop {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) { /** Small Monitor */  
+  .global-main-container, .global-container {
+    width: calc(100% - 180px); /** fix */
+  }
+
+  .global-isdesktop {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+  .global-main-container, .global-container {
+    width: calc(100% - 245px); /** fix */
+  }
+
+  .global-ismobile {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .global-main-container {
+    width: calc(100% - 245px); /** fix */
+  }
+
+  .global-container {
+    width: 1200px;
+  }
+
+  .global-ismobile {
+    display: none !important;
+  }
+}

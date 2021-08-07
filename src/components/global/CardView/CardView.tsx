@@ -192,8 +192,8 @@ function CardView(props: any) {
     <div className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
           <h4>Filter by</h4>
-          <h4>/</h4>
-          <div style={{display: "flex", gap: "40px"}}>
+          <h4 className="global-isdesktop">/</h4>
+          <div className="global-isdesktop" style={{display: "flex", gap: "40px"}}>
             {renderFilterHeaderFade("capability", showCapability)}
             {renderFilterHeaderFade("industry", showIndustry)}
             {renderFilterHeaderFade("client", showClient)}
