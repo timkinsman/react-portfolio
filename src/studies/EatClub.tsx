@@ -1,5 +1,5 @@
 import {EAT_CLUB} from "../colors"
-import img from "../images/Clients/client-eatclub.svg";
+import img from "./images/client-eatclub.svg";
 
 import { EatClub } from "../tagging/function";
 import { Website, App, Assets } from "../tagging/output";

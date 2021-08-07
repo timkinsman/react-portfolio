@@ -1,5 +1,5 @@
 import {OPEN_COURTS} from "../colors"
-import img from "../images/Clients/client-opencourts.svg";
+import img from "./images/client-opencourts.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Portal } from "../tagging/output";

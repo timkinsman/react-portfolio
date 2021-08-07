@@ -1,6 +1,6 @@
 import {LUMEA} from "../colors"
 import hover from "../images/Hover/lumea.gif";
-import img from "../images/Clients/client-lumea.svg";
+import img from "./images/client-lumea.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

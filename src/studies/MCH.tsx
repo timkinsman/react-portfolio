@@ -1,5 +1,5 @@
 import {MCH} from "../colors"
-import img from "../images/Clients/client-mch.svg";
+import img from "./images/client-mch.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { App } from "../tagging/output";

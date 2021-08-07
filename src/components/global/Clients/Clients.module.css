@@ -20,6 +20,7 @@
     position: absolute;
     row-gap: 10px;
     top: 0;
+    width: 100%;
 }
 
 .clients-img {
@@ -28,7 +29,9 @@
 }
 
 .clients-img-container {
-    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes fadeInOut {

@@ -1,25 +1,13 @@
 import React from "react";
-import {connect} from "react-redux";
 import images from "../../../images/Clients";
-import imagesLight from "../../../images/Clients/Light"
 import styles from "./Clients.module.css";
 
-const Clients = (props: any) => {
-    const firstHalf = (parrImages: Array<string>) => {
-        return parrImages.slice(0, Math.ceil(parrImages.length / 2)).map((strImageSrc: string, intIndex: number) => {
+const Clients = () => {
+    const render = (images: Array<any>) => {
+        return images.map((image: any, index: number) => {
             return (
-                <div key={intIndex} className={styles["clients-img-container"]}>
-                    <img src={strImageSrc} alt="img.svg" className={styles["clients-img"]} />
-                </div>
-            )
-        })
-    }
-
-    const secondHalf = (parrImages: Array<string>) => {
-        return parrImages.slice(-Math.ceil(parrImages.length / 2)).map((strImageSrc, intIndex: number) => {
-            return (
-                <div key={intIndex} className={styles["clients-img-container"]}>
-                    <img src={strImageSrc} alt="img.svg" className={styles["clients-img"]} />
+                <div key={index} className={styles["clients-img-container"]}>
+                    {image}
                 </div>
             )
         })
@@ -30,20 +18,14 @@ const Clients = (props: any) => {
             <h3 className="global-header">Selected Clients</h3>
             <div className={styles["clients-container"]}>
                 <div className={styles["clients-clients"]}>
-                    {props.portfolio.theme === "DARK" ? firstHalf(images) : firstHalf(imagesLight)}
+                    {render(images.slice(0, Math.ceil(images.length / 2)))}
                 </div>
                 <div className={styles["clients-clients-second"]}>
-                    {props.portfolio.theme === "DARK" ? secondHalf(images) : secondHalf(imagesLight)}
+                    {render(images.slice(-Math.ceil(images.length / 2)))}
                 </div>
             </div>
         </div>
     )
 }
-
-const mapStateToProps = ( state: { portfolio: any; } ) => {
-    return {
-        portfolio: state.portfolio
-    }
-}
   
-export default connect(mapStateToProps, null)(Clients);
+export default Clients;

@@ -2,6 +2,7 @@
     position: absolute;
     right: -10px;
     top: 0px;
+    transform: rotate(180deg);
 }
 
 .footer-border {
@@ -29,7 +30,7 @@
 .footer-theme {
     bottom: 0;
     position: absolute;
-    right: 0;
+    right: -10px;
 }
 
 .footer-grid-top{

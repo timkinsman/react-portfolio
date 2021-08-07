@@ -17,10 +17,9 @@ import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
 import video from "../../../videos/Memoji.webm";
 import { DARK, LIGHT } from "../../../colors";
-import { FiMoon, FiSun } from "react-icons/fi"
-import { BsArrowDown } from "react-icons/bs"
 import {ReactComponent as ThemeSun} from '../../../images/Theme/sun.svg';
 import {ReactComponent as ThemeMoon} from '../../../images/Theme/moon.svg';
+import {ReactComponent as ArrowDown} from '../../../images/arrow-down.svg';
 
 
 const Home = (props: any) => {
@@ -132,9 +131,12 @@ const Home = (props: any) => {
               </div>
               
               <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
-                {props.portfolio.theme === "DARK" ? <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
-                <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>}
-                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><BsArrowDown style={{fontSize: "50px"}} /></a>
+                {
+                  props.portfolio.theme === "DARK" ? 
+                    <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
+                    <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>
+                }
+                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
               </div>
             </div>
           </div>

@@ -4,9 +4,9 @@ import $ from "jquery";
 import styles from "./Footer.module.css";
 import { updateTheme } from "../../../actions";
 import {connect} from "react-redux";
-import { BsArrowUp } from "react-icons/bs"
 import {ReactComponent as ThemeSun} from '../../../images/Theme/sun.svg';
 import {ReactComponent as ThemeMoon} from '../../../images/Theme/moon.svg';
+import {ReactComponent as ArrowDown} from '../../../images/arrow-down.svg';
 
 const Footer = (props: any) => {
   const handleOnClickArrow = () => {
@@ -26,7 +26,7 @@ const Footer = (props: any) => {
         <div className={styles["footer-border"]} />
         <div className={styles["footer-container"]}>
           <div className={`${styles["footer-ismobile"]}`}>
-            <h5><a className="global-arrow" onClick={handleOnClickArrow}><BsArrowUp style={{fontSize: "50px"}} /></a></h5>
+            <h5><a className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" fill="none" stroke="currentColor" /></a></h5>
             {renderTheme()}
           </div>
           <div className={styles["footer-grid-top"]}>
@@ -62,7 +62,7 @@ const Footer = (props: any) => {
             </div>
           </div>
           <div className={`${styles["footer-isdesktop"]} ${styles["footer-arrow"]}`}>
-            <a className="global-arrow" onClick={handleOnClickArrow}><BsArrowUp style={{fontSize: "50px"}} /></a>
+            <a className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
           </div>
           <div className={`${styles["footer-isdesktop"]} ${styles["footer-theme"]}`}>
             {renderTheme()}

@@ -1,6 +1,6 @@
 import {CITY_OF_PORT_PHILLIP} from "../colors"
 import hover from "../images/Hover/copp.gif";
-import img from "../images/Clients/client-cityofportphillip.svg";
+import img from "./images/client-cityofportphillip.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website, Intranet } from "../tagging/output";

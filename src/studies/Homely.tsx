@@ -1,5 +1,5 @@
 import {HOMELY} from "../colors"
-import img from "../images/Clients/client-homely.svg";
+import img from "./images/client-homely.svg";
 
 import { Homely } from "../tagging/function";
 import { Website, App, Assets } from "../tagging/output";

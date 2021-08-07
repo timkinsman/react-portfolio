@@ -6,14 +6,12 @@ import Image from "./Image/Image";
 import Navbar from '../../global/Navbar/Navbar'
 import Tagging from './Tagging/Tagging'
 import studies from '../../../studies'
-import arrow from '../../../images/arrow-down.svg'
 import $ from 'jquery'
 import styles from './Study.module.css'
 import {connect} from "react-redux";
 import { DARK, LIGHT } from '../../../colors';
-import { HiOutlineArrowNarrowDown } from "react-icons/hi"
 import Carousel from './Carousel/Carousel';
-import { BsArrowDown } from "react-icons/bs"
+import {ReactComponent as ArrowDown} from '../../../images/arrow-down.svg';
 
 //add/remove important class!
 
@@ -183,7 +181,7 @@ const Study = (props: any) => {
                             </div>
                         </div>
                         <div className={styles["study-arrow"]}>
-                            <a onClick={() => handleOnClick('#content')}><BsArrowDown style={{fontSize: "50px"}} /></a>
+                            <a onClick={() => handleOnClick('#content')}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
                         </div>
                     </div>
                 </div>

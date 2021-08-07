@@ -1,5 +1,5 @@
 import {TRANSGRID} from "../colors"
-import img from "../images/Clients/client-transgrid.svg";
+import img from "./images/client-transgrid.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

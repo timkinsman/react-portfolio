@@ -1,58 +1,55 @@
-import australiansuper from "./client-australiansuper.svg";
-import bankvic from "./client-bankvic.svg";
-import beyondblue from "./client-beyondblue.svg";
-import bunnings from "./client-bunnings.svg";
-import bupa from "./client-bupa.svg";
-import cityofdarebin from "./client-cityofdarebin.svg";
-import cityofportphillip from "./client-cityofportphillip.svg";
-import clickfrenzy from "./client-clickfrenzy.svg";
-import eatclub from "./client-eatclub.svg";
-import frankgreen from "./client-frankgreen.svg";
-import hesta from "./client-hesta.svg";
-import homely from "./client-homely.svg";
-//import local from "./client-local.svg";
-import lxrp from "./client-lxrp.svg";
-//import mch from "./client-mch.svg";
-import nab from "./client-nab.svg";
-import nissa from "./client-nissa.svg";
-import officeworks from "./client-officeworks.svg";
-import opencourts from "./client-opencourts.svg";
-import smallbusinessvictoria from "./client-smallbusinessvictoria.svg";
-import strokefoundation from "./client-strokefoundation.svg";
-import supremecourt from "./client-supremecourt.svg";
-//import sweat from "./client-sweat.svg";
-import vicstategov from "./client-vicstategov.svg";
+import React from "react"
 
-//import childernscourt from "./client-childrenscourt.svg"
-import lumea from "./client-lumea.svg"
-import transgrid from "./client-transgrid.svg"
-import vicpolice from "./client-vicpolice.svg"
+import {ReactComponent as AustralianSuper} from "./client-australiansuper.svg";
+import {ReactComponent as BankVic} from "./client-bankvic.svg";
+import {ReactComponent as BeyondBlue} from "./client-beyondblue.svg";
+import {ReactComponent as Bunnings} from "./client-bunnings.svg";
+import {ReactComponent as Bupa} from "./client-bupa.svg";
+import {ReactComponent as CityOfDarebin} from "./client-cityofdarebin.svg";
+import {ReactComponent as CityOfPortPhillip} from "./client-cityofportphillip.svg";
+import {ReactComponent as ClickFrenzy} from "./client-clickfrenzy.svg";
+import {ReactComponent as EatClub} from "./client-eatclub.svg";
+import {ReactComponent as FrankGreen} from "./client-frankgreen.svg";
+import {ReactComponent as Hesta} from "./client-hesta.svg";
+import {ReactComponent as Homely} from "./client-homely.svg";
+import {ReactComponent as LXRP} from "./client-lxrp.svg";
+import {ReactComponent as NAB} from "./client-nab.svg";
+import {ReactComponent as Nissa} from "./client-nissa.svg";
+import {ReactComponent as OfficeWorks} from "./client-officeworks.svg";
+import {ReactComponent as OpenCourts} from "./client-opencourts.svg";
+import {ReactComponent as SmallBusinessVictoria} from "./client-smallbusinessvictoria.svg";
+import {ReactComponent as StrokeFoundation} from "./client-strokefoundation.svg";
+import {ReactComponent as SupremeCourt} from "./client-supremecourt.svg";
+import {ReactComponent as VicStateGov} from "./client-vicstategov.svg";
+import {ReactComponent as Lumea} from "./client-lumea.svg"
+import {ReactComponent as TransGrid} from "./client-transgrid.svg"
+import {ReactComponent as VicPolice} from "./client-vicpolice.svg"
 
 const images = [
-    australiansuper,
-    bankvic,
-    beyondblue,
-    bunnings,
-    bupa,
-    cityofdarebin,
-    cityofportphillip,
-    clickfrenzy,
-    eatclub,
-    frankgreen,
-    hesta,
-    homely,
-    vicpolice,
-    lxrp,
-    transgrid,
-    nab,
-    nissa,
-    officeworks,
-    opencourts,
-    smallbusinessvictoria,
-    strokefoundation,
-    supremecourt,
-    lumea,
-    vicstategov,
+    <AustralianSuper fill="currentColor" height="160" width="160" />,
+    <BankVic fill="currentColor" height="160" width="160" />,
+    <BeyondBlue fill="currentColor" height="160" width="160" />,
+    <Bunnings fill="currentColor" height="160" width="160" />,
+    <Bupa fill="currentColor" height="160" width="160" />,
+    <CityOfDarebin fill="currentColor" height="160" width="160" />,
+    <CityOfPortPhillip fill="currentColor" height="160" width="160" />,
+    <ClickFrenzy fill="currentColor" height="160" width="160" />,
+    <EatClub fill="currentColor" height="160" width="160" />,
+    <FrankGreen fill="currentColor" height="160" width="160" />,
+    <Hesta fill="currentColor" height="160" width="160" />,
+    <Homely fill="currentColor" height="160" width="160" />,
+    <LXRP fill="currentColor" height="160" width="160" />,
+    <NAB fill="currentColor" height="160" width="160" />,
+    <Nissa fill="currentColor" height="160" width="160" />,
+    <OfficeWorks fill="currentColor" height="160" width="160" />,
+    <OpenCourts fill="currentColor" height="160" width="160" />,
+    <SmallBusinessVictoria fill="currentColor" height="160" width="160" />,
+    <StrokeFoundation fill="currentColor" height="160" width="160" />, 
+    <SupremeCourt fill="currentColor" height="160" width="160" />,
+    <VicStateGov fill="currentColor" height="160" width="160" />,
+    <Lumea fill="currentColor" height="160" width="160" />,
+    <TransGrid fill="currentColor" height="160" width="160" />,
+    <VicPolice fill="currentColor" height="160" width="160" />
 ]
 
 export default images;
