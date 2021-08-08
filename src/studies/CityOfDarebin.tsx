@@ -1,5 +1,5 @@
 import {CITY_OF_DAREBIN} from "../colors"
-import img from "./images/client-cityofdarebin.svg";
+import img from "../images/Clients/client-cityofdarebin.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

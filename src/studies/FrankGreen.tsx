@@ -1,5 +1,5 @@
 import {FRANK_GREEN} from "../colors"
-import img from "./images/client-frankgreen.svg";
+import img from "../images/Clients/client-frankgreen.svg";
 
 import { IE } from "../tagging/function";
 import { Website, App } from "../tagging/output";

@@ -1,5 +1,5 @@
 import { BEYOND_BLUE } from "../colors"
-import img from "./images/client-beyondblue.svg";
+import img from "../images/Clients/client-beyondblue.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

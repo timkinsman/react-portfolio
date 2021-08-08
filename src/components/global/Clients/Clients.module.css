@@ -3,7 +3,7 @@
 }
 
 .clients-clients {
-    animation: fadeOutIn 9s infinite;
+    animation: fadeOutIn 12s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
@@ -11,7 +11,7 @@
 }
 
 .clients-clients-second {
-    animation: fadeInOut 9s infinite;
+    animation: fadeInOut 12s infinite;
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
@@ -36,12 +36,26 @@
 
 @keyframes fadeInOut {
     0%   { opacity:0; }
+    10% { opacity:0; }
+    40% { opacity:1; }
     50%  { opacity:1; }
+    60%  { opacity:1; }
+    90%  { opacity:0; }
     100% { opacity:0; }
 }
 
 @keyframes fadeOutIn {
     0%   { opacity:1; }
+    10% { opacity:1; }
+    40% { opacity:0; }
     50%  { opacity:0; }
+    60%  { opacity:0; }
+    90%  { opacity:1; }
     100% { opacity:1; }
+}
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .clients-clients, .clients-clients-second {
+        grid-template-columns: repeat(2, 1fr);
+    }   
 }

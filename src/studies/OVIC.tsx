@@ -1,5 +1,5 @@
 import {OVIC} from "../colors"
-import img from "./images/client-ovic.svg";
+import img from "../images/Clients/client-ovic.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

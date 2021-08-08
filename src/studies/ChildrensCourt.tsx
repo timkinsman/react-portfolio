@@ -1,5 +1,5 @@
 import {CHILDRENS_COURT} from "../colors"
-import img from "./images/client-childrenscourt.svg";
+import img from "../images/Clients/client-childrenscourt.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

@@ -7,3 +7,11 @@
     height: 40px;
     margin: 16px 0;
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .item-container {
+        display: grid;
+        align-items: baseline;
+        grid-template-columns: 1fr 1fr;
+    }
+}

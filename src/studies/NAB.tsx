@@ -1,5 +1,5 @@
 import {NAB} from "../colors"
-import img from "./images/client-nab.svg";
+import img from "../images/Clients/client-nab.svg";
 
 import { AKQA } from "../tagging/function";
 import { Website, Assets } from "../tagging/output";

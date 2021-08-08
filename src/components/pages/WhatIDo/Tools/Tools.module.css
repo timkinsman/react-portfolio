@@ -42,3 +42,9 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .tools-tools {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

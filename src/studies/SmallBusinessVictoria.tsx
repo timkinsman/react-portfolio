@@ -1,5 +1,5 @@
 import {SMALL_BUSINESS_VICTORIA} from "../colors"
-import img from "./images/client-smallbusinessvictoria.svg";
+import img from "../images/Clients/client-smallbusinessvictoria.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website } from "../tagging/output";

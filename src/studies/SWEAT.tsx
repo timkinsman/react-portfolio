@@ -1,5 +1,5 @@
 import {SWEAT} from "../colors"
-import img from "./images/client-sweat.svg";
+import img from "../images/Clients/client-sweat.svg";
 
 import { SWEAT as SWEAT_FUNCTION } from "../tagging/function";
 import { Website, App, Assets, eBooks } from "../tagging/output";

@@ -19,3 +19,13 @@
 .whatido-grid-three-no-row-gap > h4 {
     margin: 13.3px 0;
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .whatido-grid-two, .whatido-grid-three, .whatido-grid-three-no-row-gap {
+        grid-template-columns: 1fr;
+    }
+
+    .whatido-grid-three > div {
+        display: block !important;
+    }
+}

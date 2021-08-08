@@ -1,6 +1,6 @@
 import { BANK_VIC } from "../colors"
 import hover from "../images/Hover/bankvic.gif";
-import img from "./images/client-bankvic.svg";
+import img from "../images/Clients/client-bankvic.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 

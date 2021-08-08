@@ -211,7 +211,7 @@ const Study = (props: any) => {
                         <div className={styles["study-card-view"]}>
                             {reorderStudyCards(studies, studies.findIndex(pstudy => pstudy == study) - 1).filter(pstudy => pstudy !== study).slice(0, limit).map((pstudy, intIndex: any) => {
                                 return (
-                                    <div className={styles["study-card"]} style={{opacity: 0, animationDelay : intIndex < 3 ? "0s" : 0.25 * (Math.floor(intIndex - 3 / 2)) + 's'}}>
+                                    <div className={styles["study-card"]} style={{opacity: 0, animationDelay : intIndex < 2 ? "0s" : 0.25 * (Math.floor((intIndex - 2) / 2)) + 's'}}>
                                         <Card study={pstudy} />
                                     </div>
                                 )

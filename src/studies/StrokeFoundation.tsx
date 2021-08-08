@@ -1,5 +1,5 @@
 import {STROKE_FOUNDATION} from "../colors"
-import img from "./images/client-strokefoundation.svg";
+import img from "../images/Clients/client-strokefoundation.svg";
 
 import { VERSA_Agency } from "../tagging/function";
 import { Website, Portal } from "../tagging/output";

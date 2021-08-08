@@ -1,4 +1,11 @@
 .education-space-between {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+}
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .education-space-between {
+        grid-template-columns: repeat(1, 1fr);
+    }   
 }

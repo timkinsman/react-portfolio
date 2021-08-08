@@ -1,5 +1,5 @@
 import {CLICK_FRENZY} from "../colors"
-import img from "./images/client-clickfrenzy.svg";
+import img from "../images/Clients/client-clickfrenzy.svg";
 
 import { IE } from "../tagging/function";
 import { Website } from "../tagging/output";

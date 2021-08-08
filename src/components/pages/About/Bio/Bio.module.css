@@ -25,3 +25,13 @@
     position: relative;
     width: 100%;
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .bio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bio-img-container {
+        grid-row-end: none;
+    }
+}

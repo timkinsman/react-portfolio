@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Moderat";
   src: local("Moderat"),
-    url("./fonts/Moderat-Regular.ttf") format("truetype");
+    url("./fonts/Moderat.ttf") format("truetype");
   font-weight: normal;
 }
 

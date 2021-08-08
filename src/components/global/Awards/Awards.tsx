@@ -9,7 +9,7 @@ const Awards = () => {
             <h3 className="global-header">Awards & Recognition</h3>
             <div className={styles["awards-awards"]}>
                 <div className={styles["awards-img-container"]}>
-                    <AwardsApple height="160" fill="currentColor" />
+                    <AwardsApple height="140" fill="currentColor" />
                     <div>
                         <p>Apple Watch<br />App of the Year</p>
                     </div>

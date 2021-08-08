@@ -1,6 +1,6 @@
 import {BUPA} from "../colors"
 import hover from "../images/Hover/bupa.gif";
-import img from "./images/client-bupa.svg";
+import img from "../images/Clients/client-bupa.svg";
 
 import { IE } from "../tagging/function";
 import { Website } from "../tagging/output";

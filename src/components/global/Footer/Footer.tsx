@@ -16,8 +16,8 @@ const Footer = (props: any) => {
 
   const renderTheme = () => {
     return props.portfolio.theme === "DARK" ? 
-      <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
-      <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>
+      <a style={{display: "flex"}} onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" width="52" fill="none" stroke="currentColor" /></a> :
+      <a style={{display: "flex"}} onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" width="52" fill="none" stroke="currentColor" /></a>
   }
 
   return (
@@ -26,7 +26,7 @@ const Footer = (props: any) => {
         <div className={styles["footer-border"]} />
         <div className={styles["footer-container"]}>
           <div className={`${styles["footer-ismobile"]}`}>
-            <h5><a className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" fill="none" stroke="currentColor" /></a></h5>
+            <a style={{ transform: "rotate(180deg)", display: "flex"}} className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" width="52" fill="none" stroke="currentColor" /></a>
             {renderTheme()}
           </div>
           <div className={styles["footer-grid-top"]}>
@@ -62,7 +62,7 @@ const Footer = (props: any) => {
             </div>
           </div>
           <div className={`${styles["footer-isdesktop"]} ${styles["footer-arrow"]}`}>
-            <a className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
+            <a style={{display: "flex"}} className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
           </div>
           <div className={`${styles["footer-isdesktop"]} ${styles["footer-theme"]}`}>
             {renderTheme()}

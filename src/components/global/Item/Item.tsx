@@ -15,11 +15,13 @@ function Item(props: any) {
     }
 
     return (
-            <div>
+            <div className={styles["item-container"]}>
                 {renderImg(props.emoji)}
                 <h4>{props.header}</h4>
-                <p className={styles["item-content"]}>{props.content}<br />{props.footer}</p>
-                {renderLink(props.link)}
+                <div className={styles["item-right"]}>
+                    <p className={styles["item-content"]}>{props.content}<br />{props.footer}</p>
+                    {renderLink(props.link)}
+                </div>
             </div>
     );
 }

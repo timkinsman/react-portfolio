@@ -1,9 +1,17 @@
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
 }
 
 .contact-img {
     height: 40px;
     margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Navbar(props: any) {
   return (
@@ -16,7 +15,7 @@ function Navbar(props: any) {
           <h3><Link className="global-border-regular" style={{opacity: props.selected === "contact" ? "1" : "0.4" }} to="/contact">Contact</Link></h3>
         </div>
         <div className={`${styles["navbar-hamburger"]} global-ismobile`}>
-          <h3><GiHamburgerMenu /></h3>
+          <h3>HAM</h3>
         </div>
     </div>
   )
