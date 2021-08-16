@@ -5,7 +5,7 @@ import styles from "./Card.module.css";
 
 const Card = (props: any) => {
   return (
-    <Link className={styles["card-container"]} to={{pathname: "/study", hash: `#${props.study.redirect}`, state: { study: props.study }}}>
+    <Link className={styles["card-container"]} to={{pathname: "/study", state: { study: props.study }}}>
       <div className={`${styles["card"]} ${props.portfolio.theme === "DARK" ? styles["card-dark"] : styles["card-light"]}`} style={{background: props.study.color}}>
         <div className={styles["card-inner"]}>
           <img className={styles["card-image"]} src={props.study.img} alt="img" />

@@ -1,6 +1,7 @@
 .blog-container {
     display: flex;
     gap: 30px;
+    padding-top: 60px;
 }
 
 .grid-view {

@@ -21,7 +21,7 @@ function Panel(props: any) {
           <div onMouseEnter={handleOnMouseOut} style={{zIndex: 1}}>
               <h3 style={{margin: "30px 0"}}>{props.study.title}</h3>
               <h1 className={styles["panel-left-slogan"]}>{props.study.thumbnail}</h1>
-              <h4 style={{margin: "36px 0 0 0"}}><Link className="global-border-regular" to={{pathname: "/study", hash: `#${props.study.redirect}`, state: { study: props.study }}}>View case study →</Link></h4>
+              <h4 style={{margin: "36px 0 0 0"}}><Link className="global-border-regular" to={{pathname: "/study", state: { study: props.study }}}>View case study →</Link></h4>
           </div>
         </div>
       </div>

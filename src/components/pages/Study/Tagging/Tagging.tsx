@@ -8,7 +8,7 @@ const Tagging = (props: any) => {
             return parrstrArray.map((pstrTag: string, pintIndex: number) => {
                 return (
                     <span>
-                        <Link className="global-border-regular" to={{pathname: "/casestudies", hash: `#${pstrTag.replace(/[^a-zA-Z]/g, "").toLowerCase()}`, state: { filter: pstrTag }}}>{pstrTag}</Link>
+                        <Link className="global-border-regular" to={{pathname: "/casestudies", state: { filter: pstrTag }}}>{pstrTag}</Link>
                         <span style={{opacity: 0.4}}>{pintIndex !== parrstrArray.length - 1 ? ', ' : ''}</span>
                     </span>
                 )
