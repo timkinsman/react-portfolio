@@ -35,7 +35,7 @@ const Footer = (props: any) => {
               <div className={styles["footer-grid"]}>
                 <h4><Link to="/" className="global-border-regular">Home</Link></h4>
                 <h4><Link to="/casestudies" className="global-border-regular">Case studies</Link></h4>
-                <h4><Link to="/about" className="global-border-regular">About me</Link></h4>
+                <h4><Link to="/aboutme" className="global-border-regular">About me</Link></h4>
                 <h4><Link to="/whatido" className="global-border-regular">What I do</Link></h4>
                 <h4><Link to="/otherwork" className="global-border-regular">Other work</Link></h4>
                 <h4><Link to="/contact" className="global-border-regular">Contact</Link></h4>

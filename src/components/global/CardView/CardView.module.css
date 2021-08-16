@@ -1,9 +1,15 @@
 .card-view {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     padding-top: 20px;
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .card-view {
+        grid-template-columns: 1fr;
+    }    
+  }
 
 .card-view-chkbox {
     opacity: 0;

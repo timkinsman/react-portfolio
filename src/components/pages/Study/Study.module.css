@@ -17,9 +17,15 @@
 .study-card-view{
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+    grid-template-columns: 1fr 1fr;
     padding-top: 120px;
 }
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .study-card-view {
+        grid-template-columns: 1fr;
+    }    
+  }
 
 .study-container {
     display: flex;

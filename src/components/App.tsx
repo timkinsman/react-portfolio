@@ -33,8 +33,8 @@ const App = (props: any) => {
     <Router>
       <ScrollToTop>
         <Switch>
-          <Route exact path="/about" component={About} />
           <Route exact path="/casestudies" component={Work} />
+          <Route exact path="/aboutme" component={About} />
           <Route exact path="/whatido" component={WhatIDo} />
           <Route exact path="/otherwork" component={Blog} />
           <Route exact path="/contact" component={Contact} />

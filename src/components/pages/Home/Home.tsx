@@ -115,7 +115,7 @@ const Home = (props: any) => {
 
             <div style={{opacity: 0, animationDelay : '0.5s'}} className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
               <h1 className={styles["home-panel-text"]}>
-                Hello, my name is <Link className="global-border-bold" to="/about">Matthew Kinsman</Link>,<br />
+                Hello, my name is <Link className="global-border-bold" to="/aboutme">Matthew Kinsman</Link>,<br />
                 I’m a senior product designer<br />
                 currently living in Melbourne and<br />
                 and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.

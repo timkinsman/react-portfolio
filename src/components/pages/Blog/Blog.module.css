@@ -1,0 +1,17 @@
+.blog-container {
+    display: flex;
+    gap: 30px;
+}
+
+.grid-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 90px 0;
+    gap: 20px
+}
+
+@media only screen and (max-width: 991px) { /** Tablet */
+    .grid-view {
+        grid-template-columns: 1fr;
+    }    
+  }
