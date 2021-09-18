@@ -7,7 +7,6 @@ import App from './components/App';
 import reducers from './reducers';
 import './index.css';
 import './responsive.css';
-import './fonts/Moderat.ttf';
 
 const store = createStore(
   reducers
