@@ -16,6 +16,7 @@ const Footer = (props: any) => {
 
   const renderTheme = () => {
     return props.portfolio.theme === "DARK" ? 
+    //if mobile h and w 40
       <a style={{display: "flex"}} onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" width="52" fill="none" stroke="currentColor" /></a> :
       <a style={{display: "flex"}} onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" width="52" fill="none" stroke="currentColor" /></a>
   }

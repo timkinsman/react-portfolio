@@ -41,6 +41,19 @@
     width: fit-content;
 }
 
+.home-panel-text {
+    font-size: 50px;
+    line-height: 72px;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 768px) { /** Mobile */
+    .home-panel-text {
+        line-height: 56px;
+        font-size: 36px;
+    }
+}
+
 .home-visibility-hidden {
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 4s; /* Firefox < 16 */

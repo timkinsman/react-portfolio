@@ -3,3 +3,9 @@
     gap: 60px;
     grid-template-columns: repeat(3, 1fr);
 }
+
+@media only screen and (max-width: 768px) { /** Mobile */
+    .tagging-grid {
+        grid-template-columns: 1fr;
+    }
+}

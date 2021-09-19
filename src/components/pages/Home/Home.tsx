@@ -130,7 +130,7 @@ const Home = (props: any) => {
                 <Spotify />
               </div>
               
-              <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]}`}>
+              <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]} global-isdesktop`}>
                 {
                   props.portfolio.theme === "DARK" ? 
                     <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
