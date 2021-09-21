@@ -82,7 +82,7 @@ const Testimonials = () => {
     }
 
     return (
-        <div className="global-wrapper">
+        <div className="global-wrapper" style={{padding: isMobile ? "30px 0 60px 0" : ""}}>
             <div className={styles["testimonials-container"]}>
                 <h3 className="global-header" style={{padding: 0}}>Testimonials</h3>
                 <div className={styles["testimonials-carousel-container"]}>

@@ -18,7 +18,7 @@ function Panel(props: any) {
 
   const renderTitle = () => {
     if(isMobile){
-      return <h5 style={{margin: "30px 0"}}>{props.study.title}</h5>
+      return <h5>{props.study.title}</h5>
     }else{
       return <h3 style={{margin: "30px 0"}}>{props.study.title}</h3>
     }
@@ -26,7 +26,7 @@ function Panel(props: any) {
 
   const renderThumbnail = () => {
     if(isMobile){
-      return <h3 className={styles["panel-left-slogan"]}>{props.study.thumbnail}</h3>
+      return <h3 style={{padding: "20px 0"}} className={styles["panel-left-slogan"]}>{props.study.thumbnail}</h3>
     }else{
       return <h1 className={styles["panel-left-slogan"]}>{props.study.thumbnail}</h1>
     }
@@ -34,7 +34,7 @@ function Panel(props: any) {
 
   const renderView = () => {
     if(isMobile){
-      return <h5 style={{margin: "36px 0 0 0"}}><Link className="global-border-regular" to={{pathname: "/study", state: { study: props.study }}}>View case study →</Link></h5>
+      return <h5><Link className="global-border-regular" to={{pathname: "/study", state: { study: props.study }}}>View case study →</Link></h5>
     }else{
       return <h4 style={{margin: "36px 0 0 0"}}><Link className="global-border-regular" to={{pathname: "/study", state: { study: props.study }}}>View case study →</Link></h4>
     }

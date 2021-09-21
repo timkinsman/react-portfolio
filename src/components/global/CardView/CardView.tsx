@@ -192,7 +192,7 @@ function CardView(props: any) {
 
   return (
     <div className="global-wrapper" id={props.id}>
-        <div className={styles["card-view-filter-by"]}>
+        <div className={styles["card-view-filter-by"]} style={{padding: isMobile ? "0" : ""}}>
           {isMobile ? <h5>Filter by ↓</h5> : <h4>Filter by</h4>}
           {isMobile ? <React.Fragment /> :
             <React.Fragment>

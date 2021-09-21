@@ -10,7 +10,7 @@
   .global-title {
     font-size: 40px;
     line-height: 52px;
-    padding: 0;
+    padding: 20px 0;
   }
   
   h1 {
@@ -41,6 +41,14 @@
   p {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .global-wrapper {
+    padding: 30px 0;
+  }
+
+  .global-header {
+    padding-bottom: 20px;
   }
 }
   

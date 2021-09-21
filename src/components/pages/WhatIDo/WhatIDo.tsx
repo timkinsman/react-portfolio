@@ -8,9 +8,11 @@ import images from "../../../images/Emojis"
 import styles from "./WhatIDo.module.css";
 
 function WhatIDo() {
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+  
   const renderResearchMethods = (parrstrResearchMethods: Array<string>) => {
     return parrstrResearchMethods.map((pstrResearchMethod) => {
-      return <h4>{pstrResearchMethod}</h4>
+      return <h4 style={{margin: isMobile ? "9px 0" : ""}}>{pstrResearchMethod}</h4>
     })
   }
 
@@ -21,23 +23,23 @@ function WhatIDo() {
         <div className="global-container">
           <p className="global-title">What I do</p>
           
-          <div className="global-wrapper">
-            <div className={styles["whatido-grid-two"]}>
+          <div className="global-wrapper" style={{padding: isMobile ? "20px 0 30px 0" : ""}}>
+            <div className={styles["whatido-grid-two"]} style={{gap: isMobile ? "40px" : ""}}>
               <div>
-                <img style={{height: "40px", margin: "16px 0"}} src={images.whatitry} />
-                <h3 className="global-header">What I try to do</h3>
+                {isMobile ? "" : <img style={{height: "40px", margin: "16px 0"}} src={images.whatitry} />}
+                <h3 className="global-header" style={{paddingBottom: isMobile ? "40px" : ""}}>What I try to do</h3>
                 <p>Listen, have at least showered before my first zoom call, solve complex problems, have fun, question everything, create transformative and memorable experiences, enable meaningful conversations between a brand and their audience, tell a story, dissolve ego, communicate clearly, consider everyone for accessibility, make a positive impact.</p>
               </div>
               <div>
-                <img style={{height: "40px", margin: "16px 0"}} src={images.whatidonttry} />
-                <h3 className="global-header">What I <i>don't</i> try to do</h3>
+                {isMobile ? "" : <img style={{height: "40px", margin: "16px 0"}} src={images.whatidonttry} />}
+                <h3 className="global-header" style={{paddingBottom: isMobile ? "40px" : ""}}>What I <i>don't</i> try to do</h3>
                 <p>Make assumptions, ask leading questions, use too many buzzwords, go over budget, abbreviate things, bite off more than I can chew, worry about success, let my perfectionism seep in, take a ‘waterfall’ approach, take the easier path, make arbitrary decisions, add to the world’s noise.</p>
               </div>
             </div>
           </div>
 
           <div className="global-wrapper">
-            <h3 className="global-header">Process</h3>
+            <h3 className="global-header" style={{paddingBottom: isMobile ? "40px" : ""}}>Process</h3>
             <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.strategy} header="1. Strategise" content="Planning sounds rigid and what you have the luxury of doing when you’re in control. In this line of work, things change and they change quickly and often. You need to be able to adapt. A strategy is more like a vision of what you hope to achieve as opposed to the precise steps on how to get there." footer=""/>
               <Item emoji={images.research} header="2. Research" content="Understanding your target audience is the key to knowing how to best communicate with them. Reading, observing and listening are your superpowers here, use them. Absorb the critical information detailing what their needs, perceptions and behaviours are and where their pain points lie." footer=""/>
@@ -49,7 +51,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className="global-header">Principles</h3>
+            <h3 className="global-header" style={{paddingBottom: isMobile ? "40px" : ""}}>Principles</h3>
             <div className={styles["whatido-grid-three"]}>
               <Item emoji={images.curious} header="Be curious" content="Ask lots of questions and then ask some more. At times it can be annoying, at times it might be the wrong ones to ask. But you don’t get the knowledge you are in search of without first being eager to obtain it." footer=""/>
               <Item emoji={images.proactive} header="First proactive, then reative" content="It’s always important to zoom out and not just focus on fixing problems caused by decisions that have already been made. This presents you with huge, often challenging constraints to work under. Dig deeper and establish context." footer=""/>
@@ -61,7 +63,7 @@ function WhatIDo() {
           </div>
 
           <div className="global-wrapper">
-            <h3 className="global-header">Research Methods</h3>
+            <h3 className="global-header" style={{paddingBottom: isMobile ? "40px" : ""}}>Research Methods</h3>
             <div className={styles["whatido-grid-three-no-row-gap"]}>
               {renderResearchMethods(arrResearchMethods)}
             </div>

@@ -18,7 +18,7 @@ function About() {
         <Navbar selected="about" />
         <div className="global-container">
           <p className="global-title">About me</p>
-          <div className={`${styles["about-quote"]} global-wrapper`} style={{padding: isMobile ? "32px 0" : ""}}>
+          <div className={`${styles["about-quote"]} global-wrapper`} style={{padding: isMobile ? "20px 0px 40px 0" : ""}}>
             {isMobile ?
               <h3>In design, “intuitive” is a synonym for “matches the user’s mental model.” The closer an interface fits that image, the easier it will be to learn, use and navigate. This is a concept with a lot of practical value.” – Erika Hall</h3> :
               <h2>In design, “intuitive” is a synonym for “matches the user’s mental model.” The closer an interface fits that image, the easier it will be to learn, use and navigate. This is a concept with a lot of practical value.” – Erika Hall</h2>

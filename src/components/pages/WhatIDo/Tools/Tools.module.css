@@ -1,8 +1,6 @@
 .tools-img {
-    height: 150px;
     opacity: 1;
     transition: opacity 1s;
-    width: 150px;
 }
 
 .tools-img:hover{

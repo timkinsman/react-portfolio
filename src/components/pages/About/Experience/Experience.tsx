@@ -3,9 +3,10 @@ import Item from "../../../global/Item/Item";
 import styles from "./Experience.module.css";
 
 function Experience() {
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
   return (
     <div className="global-wrapper">
-      <h3 className="global-header">Experience</h3>
+      <h3 className="global-header" style={{padding: isMobile ? "0 0 40px 0" : ""}}>Experience</h3>
       <div className={styles["experience-grid"]}>
         <Item emoji="" header="Collect" content="Intern Graphic Designer" footer="March 2015 - May 2015" link="https://www.collectdesign.com.au/" />
         <Item emoji="" header="SWEAT" content="Graphic Designer" footer="July 2015 - January 2016" link="https://www.sweat.com/" />
