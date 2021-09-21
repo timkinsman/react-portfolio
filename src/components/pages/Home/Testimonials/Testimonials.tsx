@@ -6,6 +6,8 @@ import styles from "./Testimonials.module.css";
 const Testimonials = () => {
     const [currTestimonial, setCurrTestimonial] = useState(0)
 
+    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
     const testimonials = [
         {
             id: 0,
@@ -69,8 +71,8 @@ const Testimonials = () => {
                     <div key={`renderTestimonials-${intIndex}`} className={styles["testimonials-grid"]}>
                         <div className="global-fadein">
                             <div className={styles["testimonials-div"]}>
-                                <h2>{pobjTestimonial.quote}</h2>
-                                <p className={styles["testimonials-from"]}>{pobjTestimonial.from}<br />{pobjTestimonial.details}</p>
+                                {isMobile ? <h4>{pobjTestimonial.quote}</h4> : <h2>{pobjTestimonial.quote}</h2>}
+                                <h5 className={styles["testimonials-from"]}>{pobjTestimonial.from}<br />{pobjTestimonial.details}</h5>
                             </div>
                         </div>
                     </div>
@@ -82,7 +84,7 @@ const Testimonials = () => {
     return (
         <div className="global-wrapper">
             <div className={styles["testimonials-container"]}>
-                <h3 className="global-header">Testimonials</h3>
+                <h3 className="global-header" style={{padding: 0}}>Testimonials</h3>
                 <div className={styles["testimonials-carousel-container"]}>
                     {renderCarousel()}
                 </div>

@@ -43,9 +43,9 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
-@media only screen and (max-width: 991px) { /** Tablet */
+@media only screen and (max-width: 768px) { /** Tablet */
     .socials-socials {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
 }

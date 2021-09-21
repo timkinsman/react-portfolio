@@ -188,19 +188,25 @@ function CardView(props: any) {
     )
   }*/
 
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
   return (
     <div className="global-wrapper" id={props.id}>
         <div className={styles["card-view-filter-by"]}>
-          <h4>Filter by</h4>
-          <h4 className="global-isdesktop">/</h4>
-          <div className="global-isdesktop" style={{display: "flex", gap: "40px"}}>
-            {renderFilterHeaderFade("capability", showCapability)}
-            {renderFilterHeaderFade("industry", showIndustry)}
-            {renderFilterHeaderFade("client", showClient)}
-            {renderFilterHeaderFade("method", showResearchMethod)}
-            {renderFilterHeaderFade("output", showOutput)}
-          </div>
-          {renderOptions()}
+          {isMobile ? <h5>Filter by ↓</h5> : <h4>Filter by</h4>}
+          {isMobile ? <React.Fragment /> :
+            <React.Fragment>
+              <h4 className="global-isdesktop">/</h4>
+              <div className="global-isdesktop" style={{display: "flex", gap: "40px"}}>
+                {renderFilterHeaderFade("capability", showCapability)}
+                {renderFilterHeaderFade("industry", showIndustry)}
+                {renderFilterHeaderFade("client", showClient)}
+                {renderFilterHeaderFade("method", showResearchMethod)}
+                {renderFilterHeaderFade("output", showOutput)}
+              </div>
+              {renderOptions()}
+            </React.Fragment>
+          }
         </div>
         {render()}
         {renderChip()}

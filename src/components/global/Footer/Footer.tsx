@@ -16,20 +16,37 @@ const Footer = (props: any) => {
 
   const renderTheme = () => {
     return props.portfolio.theme === "DARK" ? 
-    //if mobile h and w 40
-      <a style={{display: "flex"}} onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" width="52" fill="none" stroke="currentColor" /></a> :
-      <a style={{display: "flex"}} onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" width="52" fill="none" stroke="currentColor" /></a>
+      <a style={{display: "flex"}} onClick={() => props.updateTheme("LIGHT")}><ThemeSun height={isMobile ? "36" : "52"} width={isMobile ? "36" : "52"} fill="none" stroke="currentColor" /></a> :
+      <a style={{display: "flex"}} onClick={() => props.updateTheme("DARK")}><ThemeMoon height={isMobile ? "36" : "52"} width={isMobile ? "36" : "52"} fill="none" stroke="currentColor" /></a>
+  }
+
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
+  const renderMatthewKinsman = () => {
+    if(isMobile){
+      return <p>© 2021 Matthew Kinsman, Melbourne, Australia</p>
+    }else{
+      return <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
+    }
+  }
+
+  const renderTimKinman = () => {
+    if(isMobile){
+      return <p>Developed by <a className="global-border-regular" href="https://www.timkinsman.com" target="_blank">Tim Kinsman</a></p>
+    }else{
+      return <h4>Developed by <a className="global-border-regular" href="https://www.timkinsman.com" target="_blank">Tim Kinsman</a></h4>
+    }
   }
 
   return (
     <div>
-        <div style={{padding: '30px 0'}} />
+        {isMobile ? <React.Fragment /> : <div style={{padding: '30px 0'}} />}
         <div className={styles["footer-border"]} />
         <div className={styles["footer-container"]}>
-          <div className={`${styles["footer-ismobile"]}`}>
-            <a style={{ transform: "rotate(180deg)", display: "flex"}} className="global-arrow" onClick={handleOnClickArrow}><ArrowDown height="52" width="52" fill="none" stroke="currentColor" /></a>
+          {/*<div className={`${styles["footer-ismobile"]}`}>
+            <a style={{ transform: "rotate(180deg)", display: "flex"}} className="global-arrow" onClick={handleOnClickArrow}>{<ArrowDown height={isMobile ? "36" : "52"} width={isMobile ? "36" : "52"} fill="none" stroke="currentColor" />}</a>
             {renderTheme()}
-          </div>
+          </div>*/}
           <div className={styles["footer-grid-top"]}>
             <div className={styles["footer-objs"]}>
               <h3 className="global-header">Go to</h3>
@@ -56,10 +73,10 @@ const Footer = (props: any) => {
           </div>
           <div className={styles["footer-grid-bottom"]}>
             <div className={styles["footer-objs"]}>
-              <h4>© 2021 Matthew Kinsman, Melbourne, Australia</h4>
+              {renderMatthewKinsman()}
             </div>
             <div className={styles["footer-objs"]}>
-              <h4>Developed by <a className="global-border-regular" href="https://www.timkinsman.com" target="_blank">Tim Kinsman</a></h4>
+              {renderTimKinman()}
             </div>
           </div>
           <div className={`${styles["footer-isdesktop"]} ${styles["footer-arrow"]}`}>

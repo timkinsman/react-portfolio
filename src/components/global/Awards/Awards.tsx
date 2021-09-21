@@ -11,7 +11,7 @@ const Awards = () => {
                 <div className={styles["awards-img-container"]}>
                     <AwardsApple height="140" fill="currentColor" />
                     <div>
-                        <p>Apple Watch<br />App of the Year</p>
+                        <h5>Apple Watch<br />App of the Year</h5>
                     </div>
                 </div>
             </div>

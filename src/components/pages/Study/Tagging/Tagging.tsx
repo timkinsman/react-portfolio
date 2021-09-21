@@ -38,9 +38,11 @@ const Tagging = (props: any) => {
         }
     }
 
+    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
     return (
         <div style={{paddingBottom: "20px"}}>
-            <div className={styles["tagging-grid"]} style={{paddingBottom: '60px'}}>
+            <div className={styles["tagging-grid"]} style={{padding: isMobile ? "60px 0" : ' 0 0 60px 0'}}>
                 {renderLink()}
                 {renderFunction()}
                 <div>

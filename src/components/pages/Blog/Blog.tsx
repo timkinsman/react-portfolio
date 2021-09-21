@@ -7,9 +7,7 @@ import styles from "./Blog.module.css";
 function Blog() {
   const [item, setItem] = useState("projects")
 
-  const renderImages = () => {
-
-  }
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
   return (
     <div className="global-fadein">
@@ -17,13 +15,15 @@ function Blog() {
         <Navbar selected="stuff" />
         <div className="global-container">
           <p className="global-title">Other work</p>
-          <div className={styles["blog-container"]}>
-            <h3><a onClick={() => setItem("projects")} style={{opacity: item === "projects" ? 1 : 0.4}}>Projects</a></h3>
-            <h3><a onClick={() => setItem("projects")} style={{opacity: item === "writing" ? 1 : 0.4}}>Writing</a></h3>
-            <h3><a onClick={() => setItem("projects")} style={{opacity: item === "art" ? 1 : 0.4}}>Art</a></h3>
-            <h3><a onClick={() => setItem("projects")} style={{opacity: item === "playlists" ? 1 : 0.4}}>Playlists</a></h3>
-          </div>
-          <div className={styles["grid-view"]}>
+          {isMobile ? <React.Fragment /> :
+            <div className={styles["blog-container"]}>
+              <h3><a onClick={() => setItem("projects")} style={{opacity: item === "projects" ? 1 : 0.4}}>Projects</a></h3>
+              <h3><a onClick={() => setItem("projects")} style={{opacity: item === "writing" ? 1 : 0.4}}>Writing</a></h3>
+              <h3><a onClick={() => setItem("projects")} style={{opacity: item === "art" ? 1 : 0.4}}>Art</a></h3>
+              <h3><a onClick={() => setItem("projects")} style={{opacity: item === "playlists" ? 1 : 0.4}}>Playlists</a></h3>
+            </div>
+          }
+          <div className={styles["grid-view"]} style={{padding: isMobile ? "60px 0" : ""}}>
             {images.map((image: string) => {
               return (
                 <div>

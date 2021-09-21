@@ -49,8 +49,8 @@
 
 @media only screen and (max-width: 768px) { /** Mobile */
     .home-panel-text {
-        line-height: 56px;
-        font-size: 36px;
+        line-height: 40px;
+        font-size: 28px;
     }
 }
 

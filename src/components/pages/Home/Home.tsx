@@ -55,6 +55,8 @@ const Home = (props: any) => {
     }
   }
 
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
   const onScroll = () => {
     var background = "inherit"
 
@@ -115,9 +117,9 @@ const Home = (props: any) => {
 
             <div style={{opacity: 0, animationDelay : '0.5s'}} className={`${styles["home-banner-content"]} ${styles["home-visibility-hidden"]}`}>
               <h1 className={styles["home-panel-text"]}>
-                Hello, my name is <Link className="global-border-bold" to="/aboutme">Matthew Kinsman</Link>,<br />
-                I’m a senior product designer<br />
-                currently living in Melbourne and<br />
+                Hello, my name is <Link className="global-border-bold" to="/aboutme">Matthew Kinsman</Link>, {isMobile ? <React.Fragment /> : <br />}
+                I’m a senior product designer {isMobile ? <React.Fragment /> : <br />}
+                currently living in Melbourne and {isMobile ? <React.Fragment /> : <br />}
                 and working at <a className="global-border-bold" href="https://www.mindsethealth.com" rel="noreferrer" target="_blank">Mindset Health</a>.
               </h1>
               <div className={`${styles["video-container"]} global-isdesktop`}>
@@ -133,10 +135,10 @@ const Home = (props: any) => {
               <div style={{opacity: 0, animationDelay : '1.5s'}} className={`${styles["home-arrow"]} ${styles["home-visibility-hidden"]} global-isdesktop`}>
                 {
                   props.portfolio.theme === "DARK" ? 
-                    <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" fill="none" stroke="currentColor" /></a> :
-                    <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" fill="none" stroke="currentColor" /></a>
+                    <a onClick={() => props.updateTheme("LIGHT")}><ThemeSun height="52" width="52" fill="none" stroke="currentColor" /></a> :
+                    <a onClick={() => props.updateTheme("DARK")}><ThemeMoon height="52" width="52" fill="none" stroke="currentColor" /></a>
                 }
-                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
+                <a style={{marginLeft: "15px"}} onClick={() => handleOnClick("#two")}><ArrowDown fill="none" stroke="currentColor" /></a>
               </div>
             </div>
           </div>

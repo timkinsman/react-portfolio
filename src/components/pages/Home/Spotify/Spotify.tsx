@@ -8,6 +8,8 @@ function Spotify() {
   const [lfmText, updateLfmText] = useState("");
   const [sLink, updateSLink] = useState("");
 
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+
   useEffect(() => {
     fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${process.env.REACT_APP_USER}&api_key=${process.env.REACT_APP_API_KEY}&limit=1&nowplaying=true&format=json`)
       .then(response => {
@@ -24,7 +26,7 @@ function Spotify() {
           method: "POST",
           headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Basic ' + process.env.REACT_APP_AUTH //process.env.REACT_APP_SPOTIFY_CLIENT //Basic <base64 encoded client_id:client_secret>
+          'Authorization': 'Basic ' + process.env.REACT_APP_AUTH //Basic <base64 encoded client_id:client_secret>
           },
           body: "grant_type=client_credentials"
         }).then(response => {
@@ -64,11 +66,19 @@ function Spotify() {
       });
   }, []);
 
+  const renderSpotify = () => {
+    if(isMobile){
+      return <h5><span className="global-isdesktop">Currently listening to </span><a className="global-border-regular" href={sLink} target="_blank">{lfmName} by {lfmText}</a></h5>
+    }else{
+      return <h3><span className="global-isdesktop">Currently listening to </span><a className="global-border-regular" href={sLink} target="_blank">{lfmName} by {lfmText}</a></h3>
+    }
+  }
+
   if(lfmName && lfmText){
     return (
       <div className={styles["spotify-container"]}>
           <FontAwesomeIcon icon={faSpotify} className={styles["spotify-icon"]} />
-          <h3><span className="global-isdesktop">Currently listening to </span><a className="global-border-regular" href={sLink} target="_blank">{lfmName} by {lfmText}</a></h3>
+          {renderSpotify()}
       </div>
     );
   }

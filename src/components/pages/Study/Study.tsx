@@ -167,7 +167,9 @@ const Study = (props: any) => {
           return (0.2126 * parseInt(result[1], 16)) + (0.7152 * parseInt(result[2], 16)) + (0.0722 * parseInt(result[3], 16)) > 224 ? true : false
         }
         return true
-      }
+    }
+
+    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
 
     return (
         <div key={props.location.state.study.redirect} id="sContainer" style={{background: props.portfolio.theme === "DARK" ? DARK : LIGHT, color: props.portfolio.theme === "DARK" ? "#FFFFFF" : "#000000" }}>
@@ -177,11 +179,11 @@ const Study = (props: any) => {
                         <Navbar />
                         <div className="global-container" style={{margin: 'auto'}}>
                             <div className={styles["study-content"]}>
-                                <h2>{study.hero}</h2>
+                                {isMobile ? <h3>{study.hero}</h3> : <h2>{study.hero}</h2>}
                             </div>
                         </div>
                         <div className={styles["study-arrow"]}>
-                            <a onClick={() => handleOnClick('#content')}><ArrowDown height="52" fill="none" stroke="currentColor" /></a>
+                            <a onClick={() => handleOnClick('#content')}><ArrowDown fill="none" stroke="currentColor" /></a>
                         </div>
                     </div>
                 </div>
